@@ -1,0 +1,30 @@
+<section class="input-form", data-turbo="false">
+  <h1>Войдите в Контекст</h1>
+
+  <%= form_tag sessions_path do %>
+    <div class="input-form__element">
+      <%= label_tag :email, 'Ваш email:' %><%= text_field_tag :email, params[:email] %>
+    </div>
+
+    <div class="input-form__element">
+      <%= label_tag :password, 'И пароль:' %><%= password_field_tag :password %>
+    </div>
+
+    <%= submit_tag 'Войти в Контекст' %>
+    <%= link_to 'или зарегистрироваться!', signup_path %> <!--new_user_path -->
+  <% end %>
+</section>  
+
+  <%#= [1,2,3] %>
+
+  <%# 3.times do %>
+    <!-- <div>Hi</div> -->
+  <%# end %>
+
+  <%# if true %>
+    <!-- <div>Hi</div> -->
+  <%# else %>
+    <!-- Unknown   -->
+  <%# end %>
+
+  <%#= triple_div %>

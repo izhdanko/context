@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Context</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+    <%= javascript_include_tag 'https://code.jquery.com/jquery-3.6.0.min.js' %>
+  </head>
+
+  <body>
+    <h1 class="app-title"><%= link_to 'Контекст', root_path %></h1>
+
+    <% flash.each do |type, content| %>
+      <%= content_tag :div, content, class: "flash-content flash-content__#{type}" %>
+      <!-- <div class="flash-content flash-content__<%= type %>"><%= content %></div> -->
+    <% end %>
+
+    <%= yield %>
+  </body>
+</html>
+
+
+<!-- ERB.new('').result(binding)
+
+application do
+  new.html.erb
+end -->

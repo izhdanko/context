@@ -1,0 +1,19 @@
+<div class="tasks__context">
+  <div class="tasks__context__element" data-progress="<%= @context.try :progress %>">
+    <%= @context.try :content %>
+  </div>
+</div>
+
+<div class="tasks__index">
+<!--   <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div> -->
+  <%# 5.times.do %>
+    <!-- <div></div> -->
+  <%# end %>
+  <%= render partial: 'task', collection: @tasks %>
+</div>
+
+
